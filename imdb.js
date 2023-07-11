@@ -16,7 +16,7 @@ async function loadMovies(searchTerm){
 }
 
 function findMovies(){
-    let searchTerm = (movieSearchBox.value).trim();
+     let searchTerm = (movieSearchBox.value).trim();
     if(searchTerm.length > 0){
         searchList.classList.remove('hide-search-list');
         loadMovies(searchTerm);
@@ -26,7 +26,7 @@ function findMovies(){
 }
 
 function displayMovieList(movies){
-    searchList.innerHTML = "";
+     searchList.innerHTML = "";
     for(let idx = 0; idx < movies.length; idx++){
         let movieListItem = document.createElement('div');
         movieListItem.dataset.id = movies[idx].imdbID; // setting movie id in  data-id
@@ -88,8 +88,8 @@ function displayMovieDetails(details){
 }
 
 
-window.addEventListener('click', (event) => {
-    if(event.target.className != "form-control"){
-        searchList.classList.add('hide-search-list');
-    }
-});
+// window.addEventListener('click', (event) => {
+//     if(event.target.className != "form-control"){
+//         searchList.classList.add('hide-search-list');
+//     }
+// });
